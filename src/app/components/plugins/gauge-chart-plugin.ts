@@ -2,7 +2,7 @@ import { ColorService } from '../../services/color.service';
 
 const colors = ColorService.colors;
 
-export const RadialChartPlugin: any = {
+export const GaugeChartPlugin: any = {
   id: 'radialChartPlugin',
   beforeDraw(chart: any) {
     this.init(chart);
@@ -16,17 +16,9 @@ export const RadialChartPlugin: any = {
 
     chart.ctx.restore();
   },
-  init(chart: any) {
-    console.log(chart);
-
-    // chart.id = document.getElementsByTagName('canvas').length
-    // if (window.innerWidth < chart.width) {
-    //   chart.width = window.innerWidth;
-    // }
-  },
   setText(chart: any, fontSize) {
     chart.ctx.textAlign = 'center';
-    chart.ctx.fillStyle = colors.flat.primary;
+    chart.ctx.fillStyle = ColorService.colors.flat.primary;
     chart.ctx.font = `700 ${fontSize}px Montserrat`;
     chart.ctx.fillText(
       `${chart.data.datasets[0].data[0]}%`,
@@ -35,7 +27,7 @@ export const RadialChartPlugin: any = {
     );
   },
   setShadow(chart: any) {
-    chart.ctx.shadowColor = colors.shadows.chartShadow;
+    chart.ctx.shadowColor = ColorService.colors.shadows.chartShadow;
     chart.ctx.shadowBlur = 12;
     chart.ctx.shadowOffsetX = 0;
     chart.ctx.shadowOffsetY = 5;

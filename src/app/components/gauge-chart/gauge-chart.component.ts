@@ -21,6 +21,5 @@ class CustomGaugeChart extends Chart {
   constructor(config) {
     super(document.getElementById('gaugeChart') as HTMLCanvasElement, config);
     this.draw();
-    console.log(this['_metasets'][0]);
   }
 }

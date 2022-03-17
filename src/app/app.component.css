@@ -1,0 +1,33 @@
+* {
+  outline: 0;
+  border: 0;
+  user-select: none !important;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+main.container * {
+  width: 100%;
+}
+
+main.container .row {
+  background-color: white;
+  display: grid;
+  grid: auto / auto auto 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+  border: 1px solid #00000022;
+  border-radius: 4px;
+}

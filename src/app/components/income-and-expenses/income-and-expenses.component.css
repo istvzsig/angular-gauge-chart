@@ -1,0 +1,129 @@
+div.income-and-expenses-container {
+  background-color: white;
+  border: 1px solid #00000022;
+  padding: 1rem 0;
+  flex: 1;
+  overflow: hidden;
+  height: 88%;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+
+div.income-and-expenses-container h1 {
+  background-color: #0e2d43;
+  padding: 1rem;
+  color: white;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 18px;
+  margin-top: -1rem;
+  border-radius: 4px 4px 0 0;
+}
+
+div.income-and-expenses-container h1 svg {
+  fill: white;
+  display: inline;
+  width: 21px;
+  color: white;
+  font-weight: 400;
+  position: relative;
+  left: 30%;
+  top: 5px;
+  cursor: pointer;
+  transition: 420ms ease-out;
+  opacity: 0.5;
+}
+
+div.income-and-expenses-container h1 svg:hover:before {
+  content: 'Do you need some help?';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+div.income-and-expenses-container h1 svg:hover {
+  transition: 420ms ease-out;
+}
+
+div.income-and-expenses-container h1 svg:hover g path {
+  transition: 420ms ease-out;
+  fill: white;
+  opacity: 1;
+}
+
+div.income-and-expenses-container div {
+  display: inline-flex;
+  flex-direction: column;
+  width: 33.333333333%;
+}
+
+div.income-and-expenses-container h4 {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 14px;
+  box-shadow: 0 3px 0 0 #eee;
+  max-width: 80%;
+  margin-left: 10%;
+}
+
+div.income-and-expenses-container h3 {
+  text-align: center;
+  font-size: 32px;
+  color: rgb(105, 228, 105);
+  margin: 0;
+}
+
+h3.salary-text {
+  color: lightgreen !important;
+}
+
+h3.other-text {
+  color: blueviolet !important;
+}
+
+h3.expenses-text {
+  color: #fe5020 !important;
+}
+
+section.divs {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  position: relative;
+  /* top: 15%; */
+}
+
+div.income-and-expenses-container span {
+  font-size: 12px;
+  color: #00000050;
+  line-height: 1.5;
+  padding: 0 1rem;
+  text-align: center;
+  display: block;
+  margin-top: 2rem;
+}
+
+.show {
+  animation: show 1000ms ease;
+  @keyframes show {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.hide {
+  animation: hide 1000ms ease;
+  @keyframes hide {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0 !important;
+    }
+  }
+}

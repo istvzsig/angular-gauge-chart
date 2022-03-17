@@ -1,0 +1,87 @@
+/* TODO : fix to inline and remove notification text */
+
+div.alerts-container {
+  position: relative;
+  background-color: white;
+  flex: 0;
+  /* border: 1px solid #00000022; */
+  border: 1px solid #00000022;
+  padding: 1rem 0;
+  height: 88%;
+  border-radius: 4px;
+}
+
+div.alerts-container h1 {
+  background-color: #0e2d43;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin-top: -1rem;
+  border-radius: 4px 4px 0 0;
+}
+
+div.notifications {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 28px;
+  font-weight: 600;
+  border-radius: 50px;
+  /* height: 69px; */
+  text-align: center;
+  margin: 1rem;
+}
+
+svg#notification-alert-icon {
+  fill: white;
+  position: relative;
+  width: 100%;
+  max-height: 55px;
+  margin-top: 30px;
+  /* animation: pulse 2000ms forwards infinite; */
+  margin-bottom: 2rem;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+div.notifications p {
+  font-size: 47px;
+  font-weight: 400;
+  text-align: center;
+  padding: 0;
+  margin: 0;  
+}
+
+div.notifications h2 {
+  /* width: 100%; */
+  min-width: 120px;
+  padding: 0 2rem;
+  background-color: #ffa600;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 36px;
+  align-self: center;
+}
+
+div.notifications h2 p {
+  font-size: 36px;
+  color: white;
+  padding: 0;
+  margin: 0;
+  margin-left: 1.5rem;
+  font-weight: 600;
+}

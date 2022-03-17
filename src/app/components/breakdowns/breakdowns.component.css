@@ -1,0 +1,16 @@
+.breakdowns-container {
+  position: relative;
+  height: 88%;
+  background-color: white;
+  flex: 0;
+  /* border: 1px solid #00000022; */
+  border: 1px solid #00000022;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 18px;
+}
+
+.breakdowns-container h4 {
+  margin-left: 10px;
+}

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ColorService {
+  static opacity = 22;
   static colors = {
     flat: {
       primary: '#0e2d43',
@@ -11,6 +12,6 @@ export class ColorService {
     },
     shadows: {
       chartShadow: 'rgba(0,0,0,.33)',
-    }
+    },
   }
 }

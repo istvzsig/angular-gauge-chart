@@ -5,7 +5,6 @@ const colors = ColorService.colors;
 export const GaugeChartPlugin: any = {
   id: 'radialChartPlugin',
   beforeDraw(chart: any) {
-    this.init(chart);
     this.setShadow(chart);
     this.setText(chart, 47);
   },

@@ -1,3 +1,4 @@
+import { ColorService } from './../../services/color.service';
 import {
   AfterViewInit,
   Component,
@@ -11,7 +12,7 @@ import Chart, { ChartConfiguration } from 'chart.js/auto';
 
 const COLORS = {
   income: '#0e2d43',
-  savings: '#21c88c',
+  savings: 'lightgreen',
   background: '#eef1f31',
   white: '#ffffff',
   error: '#fe5020',
@@ -21,17 +22,24 @@ const DATA = {
   January: {
     income: (Math.random() * 1000) | 0,
     expenses: (Math.random() * 1000) | 0,
-    saving: function() {
+    get savings() {
       return this.income - this.expenses;
     }
   },
   February: {
     income: (Math.random() * 1000) | 0,
     expenses: (Math.random() * 1000) | 0,
+    get savings() {
+      let saved = this.income - this.expenses;
+      return saved >= 0 ? saved : 0; 
+    }
   },
   March: {
     income: (Math.random() * 1000) | 0,
     expenses: (Math.random() * 1000) | 0,
+    get savings() {
+      return this.income - this.expenses;
+    }
   },
   April: {
     income: (Math.random() * 1000) | 0,
@@ -86,35 +94,82 @@ const MONTHS = [
   'December',
 ];
 
-const OPACITY = '22';
-
 function setDataset() {
   return [
     {
-      xAxesID: 'income-bar',
       label: 'Income',
       data: [DATA['January'].income],
-      backgroundColor: [COLORS.income + OPACITY],
+      backgroundColor: [COLORS.income + ColorService.opacity],
       borderWidth: 2,
       borderColor: COLORS.income,
       barThickness: 20,
     },
     {
-      label: 'Expenses',
-      data: [DATA['January'].saving],
-      backgroundColor: [COLORS.savings + OPACITY],
-      borderWidth: 2,
-      borderColor: COLORS.error,
-      barThickness: 40,
-    },
-    {
       label: 'Savings',
       data: [DATA['January'].expenses],
-      backgroundColor: [COLORS.error + OPACITY],
+      backgroundColor: [],
       borderWidth: 2,
       borderColor: COLORS.savings,
       barThickness: 60,
     },
+    {
+      label: 'Expenses',
+      data: [DATA['January'].savings],
+      backgroundColor: [COLORS.savings + ColorService.opacity],
+      borderWidth: 2,
+      borderColor: COLORS.error,
+      barThickness: 40,
+    },
+    // // february
+    // {
+    //   label: 'Income',
+    //   data: [DATA['February'].income],
+    //   backgroundColor: [COLORS.income + ColorService.opacity],
+    //   borderWidth: 2,
+    //   borderColor: COLORS.income,
+    //   barThickness: 20,
+    // },
+    // {
+    //   label: 'Savings',
+    //   data: [DATA['February'].expenses],
+    //   backgroundColor: [],
+    //   borderWidth: 2,
+    //   borderColor: COLORS.savings,
+    //   barThickness: 60,
+    // },
+    // {
+    //   label: 'Expenses',
+    //   data: [DATA['February'].savings],
+    //   backgroundColor: [COLORS.savings + ColorService.opacity],
+    //   borderWidth: 2,
+    //   borderColor: COLORS.error,
+    //   barThickness: 40,
+    // },
+    // // March
+    // {
+    //   label: 'Income',
+    //   data: [DATA['March'].income],
+    //   backgroundColor: [COLORS.income + ColorService.opacity],
+    //   borderWidth: 2,
+    //   borderColor: COLORS.income,
+    //   barThickness: 20,
+    // },
+    // {
+    //   label: 'Savings',
+    //   data: [DATA['March'].expenses],
+    //   backgroundColor: [],
+    //   borderWidth: 2,
+    //   borderColor: COLORS.savings,
+    //   barThickness: 60,
+    // },
+    // {
+    //   label: 'Expenses',
+    //   data: [DATA['March'].savings],
+    //   backgroundColor: [COLORS.savings + ColorService.opacity],
+    //   borderWidth: 2,
+    //   borderColor: COLORS.error,
+    //   barThickness: 40,
+    // },
   ];
 }
 
@@ -154,7 +209,7 @@ const OPTIONS = {
     legend: legendPlugin,
     labels: labelPlugin,
     tooltip: {
-      enabled: false,
+      enabled: true,
     }
   },
 }

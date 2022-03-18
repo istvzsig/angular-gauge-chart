@@ -16,7 +16,7 @@ export const gaugeChartData = {
       circumference: 270,
       rotation: -135,
       borderRadius: 20,
-      // spacing: -20,
+      spacing: -20,
       padding: [0, 0, 0, 0],
     },
   ],

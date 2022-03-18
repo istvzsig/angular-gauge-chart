@@ -9,11 +9,8 @@ export const GaugeChartPlugin: any = {
     this.setText(chart, 47);
   },
   afterDatasetDraw(chart: any) {
-    chart.ctx.save();
-
-    // methods here
-
-    chart.ctx.restore();
+    // chart.ctx.save();
+    // chart.ctx.restore();
   },
   setText(chart: any, fontSize) {
     chart.ctx.textAlign = 'center';

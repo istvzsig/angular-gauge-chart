@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BubbleController } from 'chart.js';
 
 @Injectable()
 export class ColorService {

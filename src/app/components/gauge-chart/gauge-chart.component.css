@@ -13,7 +13,7 @@ div.chart-container {
 div.chart-container h1 {
   width: 100%;
   background-color: #0e2d43;
-  padding: 1rem;
+  padding: 1rem 0;
   color: white;
   margin-bottom: 1rem;
   text-align: center;

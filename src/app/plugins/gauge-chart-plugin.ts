@@ -1,4 +1,4 @@
-import { ColorService } from '../../services/color.service';
+import { ColorService } from '../services/color.service';
 
 const colors = ColorService.colors;
 

@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, Input } from '@angular/core';
 import { Chart, ChartConfiguration } from 'chart.js';
-import { gaugeChartConfiguration } from '../config/gauge-chart-config';
+import { gaugeChartConfiguration } from '../../config/gauge-chart-config';
 import * as DATA from '../../data/gauge-chart-data';
 
 @Component({

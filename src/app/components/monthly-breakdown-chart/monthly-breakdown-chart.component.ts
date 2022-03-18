@@ -106,7 +106,7 @@ function setDataset() {
     },
     {
       label: 'Savings',
-      data: [DATA['January'].expenses],
+      data: [DATA['January'].savings],
       backgroundColor: [],
       borderWidth: 2,
       borderColor: COLORS.savings,
@@ -114,7 +114,7 @@ function setDataset() {
     },
     {
       label: 'Expenses',
-      data: [DATA['January'].savings],
+      data: [DATA['January'].expenses],
       backgroundColor: [COLORS.savings + ColorService.opacity],
       borderWidth: 2,
       borderColor: COLORS.error,

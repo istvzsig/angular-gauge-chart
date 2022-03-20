@@ -1,63 +1,50 @@
-<svg
-  #gaugeChartSvg
-  id="gaugeChartSvg"
-  viewBox="0 0 293.4 260.26">
-
-  <defs>
-    <style>
-      .cls-1, .cls-3 { 
-        fill:none;
-        stroke-miterlimit: 10;
-      }
-      .cls-1 {
-        stroke:#231f20;
-        stroke-width:15px;
-      }
-      .cls-2{ opacity:0.7; }
-      .cls-3{
-        stroke-width:38px;
-        stroke:url(#linear-gradient);
-      }
-    </style>
-    <linearGradient
-      id="linear-gradient"
-      y1="130.13"
-      x2="231.22"
-      y2="130.13"
-      gradientUnits="userSpaceOnUse">
-      <stop
-        offset="0"
-        stop-color="#00adee"/>
-      <stop
-        offset="1"
-        stop-color="#fff100"/>
-    </linearGradient>
-    
-  </defs>
-  <g
-    id="Layer_2"
-    data-name="Layer 2">
+<div class="points-container ">
+  <h1>Points</h1>
+  <svg
+    #gaugeChartSvg
+    id="gaugeChartSvg"
+    viewBox="0 0 303.4 280.26">
     <g
-      id="Layer_1-2"
-      data-name="Layer 1">
-      <path
-        class="cls-1"
-        d="M58.08,246.82a133.46,133.46,0,1,1,188.73,0"/>
-        <g class="cls-2">
-          <path
-            class="cls-3"
+      id="Layer_2"
+      data-name="Layer 2">
+      <g
+        id="Layer_1-2"
+        data-name="Layer 1">
+        <path
+          class="shadow"
+          id="max-data-circle"
+          d="M58.08,246.82a133.46,133.46,0,1,1,188.73,0"/>
+          <g class="cls-2">
+            <path
+              class="current-data-circle shadow"
+              d="M58.08,246.82A133.47,133.47,0,0,1,221.39,38.16"/>
+            <path
+            class="current-data-circle2 shadow"
             d="M58.08,246.82A133.47,133.47,0,0,1,221.39,38.16"/>
+          </g>
         </g>
+
+        <radialGradient id="current-data-gradient">
+          <stop offset="2%" stop-color="#000000" />
+          <stop offset="98%" stop-color="#ffa600" />          
+        
+        </radialGradient>
+        
+        <radialGradient id="max-data-gradient">
+          <stop offset="2%" stop-color="#0e2d43" />
+          <stop offset="98%" stop-color="#7ee" />
+        </radialGradient>
+        <text
+          class="shadow"
+          x="50%"
+          y="50%"
+          dx="-59.5"
+          dy="26">
+          {{ current < 10 ? '0'+current : current }}%
+        </text>
       </g>
-      <text
-        x="50%"
-        y="50%"
-        dx="-29.5"
-        style=`font-size: {{ fontSize || 47 }}px;`
-        dy="26">
-        {{ current }}%
-      </text>
-    </g>
-    
-    Can not paint SVG.
+      
+      Can not paint SVG.
   </svg>
+
+</div>

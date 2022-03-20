@@ -1,7 +1,8 @@
 <main class="container">
   <app-header></app-header>
   <div class="row">
-    <gauge-chart  [current]="current" [max]="max"></gauge-chart>
+    <svg-gauge-chart [current]="current"></svg-gauge-chart>
+    <!-- <gauge-chart [current]="current" [max]="max"></gauge-chart> -->
     <alerts></alerts>
     <income-and-expenses></income-and-expenses>
   </div>

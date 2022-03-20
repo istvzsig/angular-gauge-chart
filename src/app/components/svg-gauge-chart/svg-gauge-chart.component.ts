@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CURRENT } from '../data/gauge-chart-data';
 @Component({
   selector: 'svg-gauge-chart',
   templateUrl: './svg-gauge-chart.component.html',
@@ -6,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SvgGaugeChartComponent implements OnInit {
 
-  @Input() current: any;
+  @Input() current = CURRENT;
 
   ngOnInit(): void {
   }

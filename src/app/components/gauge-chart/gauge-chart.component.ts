@@ -19,8 +19,9 @@ export class GaugeChartComponent implements AfterViewInit {
 
 class CustomGaugeChart extends Chart {
   constructor(config) {
-    super(document.getElementById('gaugeChart') as HTMLCanvasElement, config);
+    const canvas = document.getElementById('gaugeChart') as HTMLCanvasElement;
+    super(canvas,config);
     this.draw();
-    console.log(this['_metasets'][0]);
+
   }
 }

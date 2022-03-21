@@ -9,19 +9,17 @@ svg#gaugeChartSvg {
   font-size: 58px;
   font-weight: 900;
   fill: #0e2d43;
-  /* stroke-width: 3; */
-  /* stroke: #0e2d43; */
+
 }
 
 div.points-container {
   position: relative;
   background-color: white;
-  flex: 0;
-  /* border: 1px solid #00000022; */
   border: 1px solid #00000022;
   padding: 1rem 0;
   height: 88%;
   border-radius: 4px;
+  flex: 0;
 }
 
 
@@ -43,20 +41,23 @@ svg#gaugeChartSvg path {
   transform: scale(.9);
   transform-origin: 50% 50%;
   opacity: 1;
+  transition: 300ms ease ;
+
 }
 
 svg#gaugeChartSvg path.current-data-circle {
   stroke: url(#current-data-gradient);
   stroke-width: 37;
-  filter: blur(0);
-
+  filter: blur(10px);
+  filter: drop-shadow(0px 6px 6px rgba(0,0,0,.22));
 }
 
 svg#gaugeChartSvg  path#max-data-circle {
   fill: transparent;
   stroke: url(#max-data-gradient);
   stroke-width: 35;
-  opacity: 1;
+  opacity: .2;
+  filter: drop-shadow(0px 6px 6px rgba(0,0,0,.22));
  
 }
 
@@ -73,9 +74,6 @@ svg#gaugeChartSvg path#current-data-circle:hover {
 }
 
 
-svg#gaugeChartSvg path.current-data-circle2 {
-  stroke-width: 55;
-}
 
 .shadow {
   filter: drop-shadow(0px 6px 6px rgba(0,0,0,.22));
@@ -95,4 +93,8 @@ svg#gaugeChartSvg path.current-data-circle2 {
   100% {
     opacity: 1;
   }
+}
+
+svg#gaugeChartSvg path:hover {
+  filter: drop-shadow(0px 6px 6px rgba(0,0,0,.32));
 }

@@ -6,6 +6,9 @@ export const gaugeChartConfiguration: ChartConfiguration = {
   type: 'doughnut',
   data: gaugeChartData,
   options: {
+    onHover: e=> {
+      console.log(e.native)
+    },
     scales: {}, // Reset scales and removes rotation if data have 'spacing'
     plugins: {
       tooltip: {
